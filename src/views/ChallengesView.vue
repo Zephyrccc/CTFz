@@ -1,10 +1,16 @@
 <template>
   <el-row>
-    <Category />
-    <ChallengeSearch />
+    <el-col :span="18">
+      <Category />
+    </el-col>
+    <el-col :span="6" class="search-bar">
+      <ChallengeSearch />
+    </el-col>
   </el-row>
   <Tag />
-  <ChallengeCardList />
+  <div class="challenge-list">
+    <ChallengeCardList />
+  </div>
 </template>
 
 <script lang="ts">
@@ -23,4 +29,11 @@ export default defineComponent({
 });
 </script>
 <style scoped lang="scss">
+.search-bar {
+  align-self: center;
+}
+
+.challenge-list {
+  margin-top: 1rem;
+}
 </style>
