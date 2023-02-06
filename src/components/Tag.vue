@@ -1,6 +1,6 @@
 <template>
   <div class="tag-list">
-    <span class="tag-title">全部结果:</span>
+    <span class="tag-title">标签:</span>
     <el-tag
       v-for="tag in checkedTag"
       :key="tag.id"

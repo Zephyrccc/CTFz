@@ -3,7 +3,12 @@
     <el-menu-item index="1" route="/index">首页</el-menu-item>
     <el-menu-item index="2" route="/challenges">题目</el-menu-item>
     <el-menu-item index="3" route="/rank">天梯</el-menu-item>
-    <el-menu-item index="4" route="/team">战队</el-menu-item>
+    <el-sub-menu index="4">
+      <template #title>团队</template>
+      <el-menu-item index="4-1" route="/teams">全部团队</el-menu-item>
+      <el-menu-item index="4-2">我的团队</el-menu-item>
+    </el-sub-menu>
+
     <div class="flex-grow" />
     <el-menu-item index="5" v-if="!isLogin" route="/login">登录</el-menu-item>
     <el-sub-menu index="6" v-if="isLogin">
@@ -56,10 +61,6 @@ export default defineComponent({
 
   .flex-grow {
     flex-grow: 1;
-  }
-
-  .el-menu-item {
-    font-size: var(--el-font-size-medium);
   }
 }
 </style>

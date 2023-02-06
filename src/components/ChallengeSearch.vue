@@ -1,11 +1,5 @@
-<template class="category">
-  <el-col :span="6" class="search_bar">
-    <el-input
-      v-model="searchInput"
-      placeholder="搜索题目"
-      :suffix-icon="Search"
-    />
-  </el-col>
+<template>
+    <el-input v-model="searchInput" placeholder="搜索题目" :suffix-icon="Search" />
 </template>
 
 <script lang="ts">
@@ -23,7 +17,4 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.search_bar {
-  align-self: center;
-}
 </style>

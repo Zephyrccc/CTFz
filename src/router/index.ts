@@ -24,9 +24,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ 'views/RankView.vue')
   },
   {
-    path: '/team',
-    name: 'team',
-    component: () => import(/* webpackChunkName: "about" */ 'views/TeamView.vue')
+    path: '/teams',
+    name: 'teams',
+    component: () => import(/* webpackChunkName: "about" */ 'views/TeamsView.vue')
   },
   {
     path: '/login',

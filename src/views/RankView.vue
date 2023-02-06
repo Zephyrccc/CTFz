@@ -13,7 +13,7 @@
     </el-tag>
   </el-divider>
   <div class="rank-list">
-    <el-table :data="tableData" stripe style="width: 100%">
+    <el-table :data="rankData" stripe>
       <el-table-column label="排名">
         <template #default="scope">
           <span>{{ scope.$index }}</span>
@@ -53,7 +53,7 @@ export default defineComponent({
     const handleclick = (name: any) => {
       console.log(name)
     }
-    const tableData = [
+    const rankData = [
       {
         username: 'Xuxfff',
         team: 'A1natas',
@@ -69,7 +69,7 @@ export default defineComponent({
         solves: 3,
       },
     ]
-    return { target, tableData, handleclick }
+    return { target, rankData, handleclick }
   }
 });
 </script>

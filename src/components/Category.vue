@@ -1,16 +1,11 @@
-<template class="category">
-  <el-col :span="18">
-    <ul class="category">
-      <span class="title">题目类型:</span>
-      <li v-for="item in categoryList" :key="item.id">
-        <span
-          @click="categoryClick(item.id)"
-          :class="{ is_active: activeItem == item.id }"
-          >{{ item.category }}
-        </span>
-      </li>
-    </ul>
-  </el-col>
+<template>
+  <ul class="category">
+    <span class="title">类型:</span>
+    <li v-for="item in categoryList" :key="item.id">
+      <span @click="categoryClick(item.id)" :class="{ is_active: activeItem == item.id }">{{ item.category }}
+      </span>
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -48,26 +43,28 @@ export default defineComponent({
   padding-inline-start: 0px;
   display: flex;
   font-size: var(--el-font-size-base);
+
   span {
     display: block;
     cursor: pointer;
     padding: 0.4rem 0.6rem;
     color: #666;
   }
+
   .title {
     font-weight: bolder;
   }
-  .title:hover {
-    font-weight: bolder;
-  }
+
   span:hover {
     color: #101b27;
     font-weight: 400;
   }
+
   li {
     list-style-type: none;
     list-style: none;
   }
+
   .is_active {
     border: 1px solid #3a8ee6;
     background: #3a8ee6;

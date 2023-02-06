@@ -40,7 +40,7 @@
                   <el-link type="warning" href="http://1.14.71.254:28939" target="_blank">1.14.71.254:28939</el-link>
                 </div>
                 <el-progress type="dashboard" :percentage="80">
-                  <template #default="">
+                  <template>
                     <span>剩余:3280秒</span>
                   </template>
                 </el-progress>
@@ -75,6 +75,7 @@
                 <div class="text">想知道这个是怎么躲的呀，怎么直接得到那个密钥得到flag</div>
                 <el-divider />
               </div>
+              <el-pagination small background layout="prev, pager, next" :page-size="15" :total="20" />
             </div>
           </el-card>
         </div>

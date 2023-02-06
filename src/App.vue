@@ -17,9 +17,7 @@ import Header from "components/Header.vue";
 
 export default defineComponent({
   name: "HomeView",
-  components: {
-    Header,
-  },
+  components: { Header },
   setup() {
     const store = useStore();
     // 页面加载时读取sessionStorage的状态信息
@@ -46,21 +44,25 @@ export default defineComponent({
   padding: 0px;
   margin: 0px;
 }
+
 html,
 body,
 #app {
   width: 100%;
   height: 100%;
 }
+
 :deep(.nav-header) {
   width: 75%;
   margin: 0px auto;
   max-width: 1350px;
   min-width: 1100px;
 }
+
 .main {
   width: 75%;
   margin: 0px auto;
+  margin-top: 1rem;
   max-width: 1350px;
   min-width: 1100px;
 }
