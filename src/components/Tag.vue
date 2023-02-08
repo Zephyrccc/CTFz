@@ -1,31 +1,18 @@
 <template>
   <div class="tag-list">
     <span class="tag-title">标签:</span>
-    <el-tag
-      v-for="tag in checkedTag"
-      :key="tag.id"
-      :disable-transitions="false"
-      @close="handleClose(tag)"
-      class="tag-item"
-      closable
-    >
+    <el-tag v-for="tag in checkedTag" :key="tag.id" :disable-transitions="false" @close="handleClose(tag)"
+      class="tag-item" closable>
       {{ tag.value }}
     </el-tag>
-    <el-autocomplete
-      :fetch-suggestions="querySearch"
-      v-model="text"
-      ref="tagAutocomplete"
-      clearable
-      placeholder="+ New Tag"
-      @select="handleSelect"
-    />
+    <el-autocomplete :fetch-suggestions="querySearch" v-model="text" ref="tagAutocomplete" clearable
+      placeholder="+ New Tag" @select="handleSelect" />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref, onMounted, reactive, toRefs } from "vue";
 import { useStore } from "vuex";
 import { AutocompleteInstance } from "element-plus";
-import { getTagList } from "@/network/api";
 import { ITagItem, TYPES } from "@/types";
 
 export default defineComponent({
@@ -50,13 +37,6 @@ export default defineComponent({
           : tagList.value;
         callback(results);
       },
-      loadAll: () => {
-        getTagList().then((response: any) => {
-          // 从后端获取tag列表
-          store.commit(`ChallengeInfo/${TYPES.UPDATE_TAG_LIST}`, response.data);
-          tagList.value = response.data;
-        });
-      },
       handleSelect: (item: ITagItem) => {
         checkedTag.value.push(item);
         tagList.value.splice(tagList.value.indexOf(item), 1);
@@ -69,7 +49,7 @@ export default defineComponent({
       },
     });
     onMounted(() => {
-      methods.loadAll();
+      tagList.value = JSON.parse(JSON.stringify(store.state.ChallengeInfo.tagList));
     });
     return {
       text,
@@ -85,19 +65,23 @@ export default defineComponent({
 .tag-list {
   display: flex;
   height: 24px;
+
   .tag-title {
     font-size: var(--el-font-size-base);
     font-weight: bolder;
     color: #666;
     margin: 0.4rem 0.6rem;
   }
+
   span {
     align-self: center;
     cursor: pointer;
   }
+
   .tag-item {
     margin-right: 0.4rem;
   }
+
   :deep(.el-input__inner) {
     --el-input-inner-height: calc(var(--el-input-height, 32px) - 10px);
     font-size: 12px;

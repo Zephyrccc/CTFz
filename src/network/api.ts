@@ -59,7 +59,7 @@ export const login = (user: IUserInfoState) => {
             return Promise.reject(error)
         })
 }
-export const getUserInfo = (id: Number) => {
+export const getUserInfo = (id: number) => {
     return http.get({ url: `/user/${id}` })
 }
 
@@ -69,6 +69,9 @@ export const getTagList = () => {
 
 export const getChallengeList = () => {
     return http.get({ url: '/challenge/' })
+}
+export const getChallengeInfo = (id: number) => {
+    return http.get({ url: `/challenge/${id}` })
 }
 
 export const logout = () => {

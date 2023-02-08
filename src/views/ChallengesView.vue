@@ -9,7 +9,7 @@
   </el-row>
   <Tag />
   <div class="challenge-list">
-    <ChallengeCardList />
+    <ChallengeList />
   </div>
 </template>
 
@@ -18,11 +18,11 @@ import { defineComponent } from "vue";
 import Category from "components/Category.vue";
 import ChallengeSearch from "components/Category.vue";
 import Tag from "components/Tag.vue";
-import ChallengeCardList from "components/ChallengeCardList.vue";
+import ChallengeList from "components/ChallengeList.vue";
 
 export default defineComponent({
   name: "ChallengesView",
-  components: { Category, ChallengeSearch, Tag, ChallengeCardList },
+  components: { Category, ChallengeSearch, Tag, ChallengeList },
   setup() {
     return {};
   },

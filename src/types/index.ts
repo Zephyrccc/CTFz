@@ -5,15 +5,15 @@ export const TYPES = {
 }
 
 export interface IRootState {
-    [key: string]: any
+    [key: string]: any;
 }
 
 export interface IUserInfoState {
-    id?: string | number
-    username?: string
-    password?: string
-    sex?: string
-    solve_info?: Array<Number>
+    id?: string | number;
+    username?: string;
+    password?: string;
+    sex?: string;
+    solve_info?: Array<Number>;
 }
 export interface ITagItem {
     id: number;
@@ -21,6 +21,22 @@ export interface ITagItem {
 }
 
 export interface IChallengeInfoState {
-    tagList: Map<number, string>
+    tagList: Array<{
+        id: number
+        value: string
+    }>
 }
 
+export interface IChallengeInfo {
+    id: number;
+    category: number;
+    title: string;
+    describe: string;
+    score: number;
+    difficulty: number;
+    tag: Array<number>;
+    environment_type: string;
+    have_attachment: boolean;
+    attachment: string;
+    created_time: string
+}

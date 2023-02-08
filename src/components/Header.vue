@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu" mode="horizontal" :ellipsis="false" router>
+  <el-menu :default-active="activeIndex" class="header" mode="horizontal" :ellipsis="false" router>
     <el-menu-item index="1" route="/index">首页</el-menu-item>
     <el-menu-item index="2" route="/challenges">题目</el-menu-item>
     <el-menu-item index="3" route="/rank">天梯</el-menu-item>
@@ -56,7 +56,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.el-menu {
+.header {
   height: 100%;
 
   .flex-grow {

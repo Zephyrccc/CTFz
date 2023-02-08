@@ -2,35 +2,35 @@
   <div class="challenge">
     <el-row>
       <el-col :span="16">
-        <div class="body-left">
-          <el-card class="challenge-info">
-            <div class="challenge-title">
-              <span>{{ challengeTitle }}</span>
+        <div class="left">
+          <el-card class="info">
+            <div class="title">
+              <span>{{ challengeInfo?.title }}</span>
             </div>
-            <div class="challenge-body">
+            <div class="body">
               <p>
                 难度：
                 <el-rate v-model="challengeDifficulty" size="default" disabled show-score score-template="{value}" />
               </p>
               <p>
                 标签：
-                <el-tag v-for="tag in tagList" :key="tag.id">
-                  {{ tag.value }}
+                <el-tag v-for="tag in challengeInfo?.tag" :key="tag">
+                  {{ tagMapping(tag) }}
                 </el-tag>
               </p>
-              <p>分数： {{ challengeScore }}</p>
-              <p>描述： {{ challengeDescribe }}</p>
-              <p>
+              <p>分数： {{ challengeInfo?.score }}</p>
+              <p>描述： {{ challengeInfo?.describe }}</p>
+              <p v-if="challengeInfo?.attachment">
                 附件：
                 <el-button type="primary">
-                  {{ challengeAttachment }}
+                  下载
                   <el-icon>
                     <Download />
                   </el-icon>
                 </el-button>
               </p>
             </div>
-            <div class="challenge-footer">
+            <div class="footer">
               <div class="start">
                 <el-button type="primary"> 启动环境 </el-button>
               </div>
@@ -81,7 +81,7 @@
         </div>
       </el-col>
       <el-col :span="8">
-        <div class="body-right">
+        <div class="right">
           <el-card class="source-information">
             <el-row justify="space-evenly">
               <el-col :span="8"> 上传用户： </el-col>
@@ -105,20 +105,45 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, reactive, onMounted, toRefs } from "vue";
 import { Download, Upload } from "@element-plus/icons-vue";
-import { ITagItem } from "@/types";
+import { useRoute } from 'vue-router'
+import { useStore } from "vuex";
+import { ITagItem, IChallengeInfo } from "@/types";
+import { getChallengeInfo } from "@/network/api";
 
 export default defineComponent({
   name: "ChallengeView",
   props: {},
   components: { Download, Upload },
   setup() {
+    const store = useStore();
+    const route = useRoute();
+    const challengeInfo = ref<IChallengeInfo>()
+    const challengeDifficulty = ref(3.7);
+    const methods = reactive({
+      tagMapping: (id: number) => {
+        return store.state.ChallengeInfo.tagList.find((t: any) => t.id === id)?.value
+      },
+      loadAll: () => {
+        getChallengeInfo(Number(route.params.id)).then((response: any) => {
+          challengeInfo.value = response.data
+          challengeDifficulty.value = response.data.difficulty
+          console.log(challengeInfo)
+        });
+      }
+    })
+    onMounted(() => {
+      methods.loadAll()
+    });
+
+
+
+
     const flagValue = ref("");
-    const commentText = ref("")
+    const commentText = ref("");
 
     const challengeTitle = ref("TestChallengeTitle1");
-    const challengeDifficulty = ref(3.7);
     const challengeScore = ref(3.7);
     const challengeDescribe = ref("TestChallengeDescribe1");
     const challengeAttachment = ref("TestChallengeAttachment1");
@@ -128,6 +153,8 @@ export default defineComponent({
       { id: 3, value: "Misc" },
     ]);
     return {
+      ...toRefs(methods),
+      challengeInfo,
       flagValue,
       commentText,
       challengeTitle,
@@ -146,13 +173,13 @@ export default defineComponent({
   font-size: var(--el-font-size-extra-large);
   font-family: var(--el-font-family);
 
-  .body-left {
-    .challenge-info {
-      .challenge-title {
+  .left {
+    .info {
+      .title {
         text-align: center;
       }
 
-      .challenge-body {
+      .body {
         font-size: var(--el-font-size-large);
         color: var(--el-text-color-regular);
 
@@ -168,7 +195,7 @@ export default defineComponent({
         }
       }
 
-      .challenge-footer {
+      .footer {
         text-align: center;
 
         div {
@@ -242,7 +269,7 @@ export default defineComponent({
     }
   }
 
-  .body-right {
+  .right {
     .source-information {
       margin-left: 1rem;
       font-size: var(--el-font-size-medium);

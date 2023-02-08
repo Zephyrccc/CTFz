@@ -11,8 +11,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive, onMounted } from "vue";
 import { useStore } from "vuex";
+import { getTagList } from "@/network/api";
+import { TYPES } from "@/types";
 import Header from "components/Header.vue";
 
 export default defineComponent({
@@ -20,22 +22,36 @@ export default defineComponent({
   components: { Header },
   setup() {
     const store = useStore();
-    // 页面加载时读取sessionStorage的状态信息
-    if (sessionStorage.getItem("store")) {
-      const oldStore = sessionStorage.getItem("store");
-      store.replaceState(
-        Object.assign(
-          {},
-          store.state,
-          JSON.parse(oldStore == null ? "" : oldStore)
-        )
-      );
-    }
-    // 在页面刷新时将store保存到sessionStorage中
-    window.addEventListener("beforeunload", () => {
-      const state = JSON.stringify(store.state);
-      sessionStorage.setItem("store", state == null ? "" : state);
-    });
+    const methods = reactive({
+      prepare: () => {
+        // 页面加载时读取sessionStorage的状态信息
+        if (sessionStorage.getItem("store")) {
+          const oldStore = sessionStorage.getItem("store");
+          store.replaceState(
+            Object.assign(
+              {},
+              store.state,
+              JSON.parse(oldStore == null ? "" : oldStore)
+            )
+          );
+        }
+        // 在页面刷新时将store保存到sessionStorage中
+        window.addEventListener("beforeunload", () => {
+          const state = JSON.stringify(store.state);
+          sessionStorage.setItem("store", state == null ? "" : state);
+        });
+      },
+      loadAll: () => {
+        getTagList().then((response: any) => {
+          // 从后端获取tag列表
+          store.commit(`ChallengeInfo/${TYPES.UPDATE_TAG_LIST}`, response.data);
+        });
+      }
+    })
+    onMounted(() => {
+      methods.prepare()
+      methods.loadAll()
+    })
   },
 });
 </script>

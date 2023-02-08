@@ -9,7 +9,7 @@ const TIME_OUT = 5000
 
 if (process.env.NODE_ENV === "development") {
   // 这里BASE_URL 后地址根据实际项目服务器地址填写，这里是示例
-  BASE_URL = "api"
+  BASE_URL = "/api"
 } else if (process.env.NODE_ENV === "production") {
   BASE_URL = "http://127.0.0.1:8000"
 } else {
