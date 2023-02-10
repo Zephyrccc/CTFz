@@ -37,11 +37,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/register',
     name: 'register',
     component: () => import(/* webpackChunkName: "about" */ 'views/RegisterView.vue')
-  }, 
+  },
   {
     path: '/challenge/:id',
     name: 'challenge',
     component: () => import(/* webpackChunkName: "about" */ 'views/ChallengeView.vue')
+  },
+  {
+    path: '/user/:id',
+    name: 'user',
+    component: () => import(/* webpackChunkName: "about" */ 'views/UserView.vue')
+  },
+  {
+    path: '/team/:id',
+    name: 'team',
+    component: () => import(/* webpackChunkName: "about" */ 'views/TeamView.vue')
   }
 ]
 

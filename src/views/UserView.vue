@@ -1,21 +1,23 @@
 <template>
   <div class="main">
     <el-card class="user">
-      <el-avatar :size="130" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" />
-      <div class="username">XDQMORE</div>
-      <span>这家伙很懒什么也没留下</span>
+      <el-avatar :size="130" :src="userInfo?.avatar" />
+      <div class="username">{{ userInfo?.username }}</div>
+      <span>{{ userInfo?.describe }}</span>
       <el-divider />
       <el-row justify="space-between" class="user-info">
         <el-col :span="6" class="score">
-          <div class="value">7788</div>
+          <div class="value">{{ userInfo?.total_score }}</div>
           <div>积分</div>
         </el-col>
         <el-col :span="6" class="solve">
-          <div class="value">2</div>
+          <div class="value">{{ userInfo?.solve_info?.length }}</div>
           <div>解题数</div>
         </el-col>
         <el-col :span="6" class="team">
-          <el-link :href="'/team/' + 1" type="danger" class="value">三叶草</el-link>
+          <el-link :href="'/team/' + userInfo?.team?.id" type="danger" class="value"
+            v-if="teamNameDisplay(userInfo?.team?.name)">{{ userInfo?.team?.name }}</el-link>
+          <el-link type="danger" class="value" :underline="false" v-else>-</el-link>
           <div>团队</div>
         </el-col>
       </el-row>
@@ -39,14 +41,34 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
-
+import { defineComponent, reactive, ref, toRefs, onMounted } from "vue";
+import { useRoute } from 'vue-router'
+import { getUserInfo } from "@/network/api";
+import { IUserInfo } from "@/types";
 
 export default defineComponent({
   name: "UserView",
   props: {},
   components: {},
   setup() {
+    const route = useRoute();
+    const userInfo = ref<IUserInfo>()
+    const methods = reactive({
+      teamNameDisplay: (name: string | undefined) => {
+        if (typeof name === "undefined")
+          return false
+        return true
+      },
+      loadAll: () => {
+        getUserInfo(Number(route.params.id)).then((response: any) => {
+          userInfo.value = response.data
+          console.log(userInfo.value)
+        });
+      }
+    })
+    onMounted(() => {
+      methods.loadAll()
+    });
     const tableData = [
       {
         title: '兔年大吉',
@@ -74,6 +96,8 @@ export default defineComponent({
       },
     ]
     return {
+      ...toRefs(methods),
+      userInfo,
       tableData
     };
   },
@@ -125,7 +149,8 @@ export default defineComponent({
 .solving-record {
   margin-top: 2rem;
   text-align: center;
-  .pagination{
+
+  .pagination {
     margin-top: 1rem;
   }
 }

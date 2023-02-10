@@ -8,18 +8,37 @@ export interface IRootState {
     [key: string]: any;
 }
 
-export interface IUserInfoState {
-    id?: string | number;
+export interface ITeam {
+    id: number;
+    name: string;
+    captain: IUserInfo;
+    member?: Array<object>;
+    declare: string;
+    describe: string;
+    created_time: string;
+}
+
+export interface IUserInfo {
+    id?: number | undefined;
+    avatar?: string;
     username?: string;
     password?: string;
     sex?: string;
-    solve_info?: Array<Number>;
+    solve_info?: Array<number>;
+    total_score?: number;
+    describe?: string;
+    team?: ITeam;
 }
+
+export interface IUserInfoState extends IUserInfo { }
 export interface ITagItem {
     id: number;
     value: string;
 }
-
+export interface ICategory {
+    id:number;
+    name:string;
+}
 export interface IChallengeInfoState {
     tagList: Array<{
         id: number
@@ -29,14 +48,15 @@ export interface IChallengeInfoState {
 
 export interface IChallengeInfo {
     id: number;
-    category: number;
     title: string;
+    environment_type: string;
+    category: number;
+    tag: Array<{ id: number, value: string }>;
     describe: string;
     score: number;
     difficulty: number;
-    tag: Array<number>;
-    environment_type: string;
-    have_attachment: boolean;
     attachment: string;
     created_time: string
 }
+
+

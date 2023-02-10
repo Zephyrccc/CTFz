@@ -4,7 +4,7 @@
       <Category />
     </el-col>
     <el-col :span="6" class="search-bar">
-      <ChallengeSearch />
+      <Search placeholderText="搜索用户"/>
     </el-col>
   </el-row>
   <el-divider>
@@ -42,12 +42,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import Category from "components/Category.vue";
-import ChallengeSearch from "components/Category.vue";
+import Category from "@/components/Category.vue";
+import Search from "@/components/Search.vue";
 
 export default defineComponent({
   name: "RankView",
-  components: { Category, ChallengeSearch },
+  components: { Category, Search },
   setup() {
     const target: string = "/user/"
     const handleclick = (name: any) => {

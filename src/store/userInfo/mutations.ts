@@ -10,7 +10,7 @@ export const mutations: MutationTree<IUserInfoState> = {
     state.solve_info = UserInfo.solve_info
   },
   [TYPES.EMPTY_USER_INFO]: (state) => {
-    state.id = ''
+    state.id = undefined
     state.username = ''
     state.sex = ''
     state.solve_info = []

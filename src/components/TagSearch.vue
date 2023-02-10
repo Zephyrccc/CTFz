@@ -10,16 +10,20 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref, onMounted, reactive, toRefs } from "vue";
-import { useStore } from "vuex";
+import { defineComponent, ref, reactive, toRefs, watch,PropType } from "vue";
 import { AutocompleteInstance } from "element-plus";
-import { ITagItem, TYPES } from "@/types";
+import { ITagItem } from "@/types";
+
 
 export default defineComponent({
-  name: "Tag",
-  props: {},
-  setup() {
-    const store = useStore();
+  name: "TagSearch",
+  props: {
+    tagList: {
+      type: Object as PropType<ITagItem[]>,
+      default: []
+    }
+  },
+  setup(props) {
     const text = ref("");
     const checkedTag = ref<ITagItem[]>([]);
     const tagList = ref<ITagItem[]>([]);
@@ -30,6 +34,9 @@ export default defineComponent({
         return tag.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0;
       };
     };
+    watch(() => props.tagList, (newValue, oldValue) => {
+      tagList.value = newValue
+    },)
     const methods = reactive({
       querySearch: (queryString: string, callback: Function) => {
         const results = queryString
@@ -47,9 +54,6 @@ export default defineComponent({
         checkedTag.value.splice(checkedTag.value.indexOf(item), 1);
         tagList.value.unshift(item);
       },
-    });
-    onMounted(() => {
-      tagList.value = JSON.parse(JSON.stringify(store.state.ChallengeInfo.tagList));
     });
     return {
       text,

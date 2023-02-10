@@ -13,8 +13,8 @@
           </div>
         </template>
         <div class="describe">{{ challenge.describe }}</div>
-        <el-tag class="tag" v-for="(tagId, idx) in challenge.tag" :key="idx">
-          {{ tagMapping(tagId) }}
+        <el-tag class="tag" v-for="tag in challenge.tag" :key="tag.id">
+          {{ tag.value }}
         </el-tag>
       </el-card>
     </el-col>
@@ -26,19 +26,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, toRefs, ref, reactive } from "vue";
-import { useStore } from "vuex";
+import { defineComponent, toRefs, ref, reactive, PropType, watch } from "vue";
 import { useRouter } from 'vue-router'
-import { getChallengeList } from "@/network/api";
+import { IChallengeInfo } from "@/types";
 
 export default defineComponent({
   name: "ChallengeList",
-  props: {},
-  setup() {
-    const store = useStore();
+  props: {
+    challengeTotal: {
+      type: Number,
+      default: 0
+    },
+    challengeList: {
+      type: Object as PropType<IChallengeInfo[]>,
+      default: []
+    }
+  },
+  setup(props) {
     const router = useRouter();
     const challengeTotal = ref(0);
-    const challengeList = ref([]);
+    const challengeList = ref<IChallengeInfo[]>([]);
 
     const methods = reactive({
       handleClick: (challenge: any) => {
@@ -50,21 +57,17 @@ export default defineComponent({
           }
         })
       },
-      tagMapping: (id: number) => {
-        return store.state.ChallengeInfo.tagList.find((t: any) => t.id === id)?.value
-      },
-      loadAll: () => {
-        getChallengeList().then((response: any) => {
-          challengeTotal.value = response.data.length;
-          challengeList.value = response.data;
-        });
-      },
+      // tagMapping: (id: number) => {
+      //   return store.state.ChallengeInfo.tagList.find((t: any) => t.id === id)?.value
+      // },
     });
-    onMounted(() => {
-      methods.loadAll();
-    });
+    watch(() => props.challengeList, (newValue, oldValue) => {
+      challengeList.value = newValue
+    },)
+    watch(() => props.challengeTotal, (newValue, oldValue) => {
+      challengeTotal.value = newValue
+    },)
     return {
-      store,
       ...toRefs(methods),
       challengeList,
       challengeTotal,

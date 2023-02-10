@@ -2,33 +2,40 @@
   <ul class="category">
     <span class="title">类型:</span>
     <li v-for="item in categoryList" :key="item.id">
-      <span @click="categoryClick(item.id)" :class="{ is_active: activeItem == item.id }">{{ item.category }}
+      <span @click="handleClick(item)" :class="{ is_active: activeItem == item.id }">{{ item.name }}
       </span>
     </li>
   </ul>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, reactive, toRefs, watch,PropType } from "vue";
+import { ICategory } from '@/types'
 
 export default defineComponent({
   name: "Category",
-  props: {},
-  setup() {
-    const activeItem = ref(0);
-    const categoryList = [
-      { id: 0, category: "ALL" },
-      { id: 1, category: "Web" },
-      { id: 2, category: "Pwn" },
-      { id: 3, category: "Reverse" },
-      { id: 4, category: "Crypto" },
-      { id: 5, category: "Misc" },
-      { id: 6, category: "Other" },
-    ];
-    const categoryClick = (id: number) => {
-      activeItem.value = id;
-    };
-    return { activeItem, categoryList, categoryClick };
+  props: {
+    categoryList: {
+      type: Object as PropType<ICategory[]>,
+      default: []
+    }
+  },
+  emits: {
+    "change": null
+  },
+  setup(props, { emit }) {
+    const activeItem = ref(1);
+    const categoryList = ref<ICategory[]>([])
+    const methods = reactive({
+      handleClick: (item: ICategory) => {
+        activeItem.value = item.id;
+        emit('change', item)
+      }
+    })
+    watch(() => props.categoryList, (newValue, oldValue) => {
+      categoryList.value = newValue
+    },)
+    return { activeItem, categoryList, ...toRefs(methods) };
   },
 });
 </script>

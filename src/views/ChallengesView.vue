@@ -1,30 +1,59 @@
 <template>
   <el-row>
     <el-col :span="18">
-      <Category />
+      <Category @change="handleChange" :categoryList="categoryList" />
     </el-col>
     <el-col :span="6" class="search-bar">
-      <ChallengeSearch />
+      <Search placeholderText="搜索题目" />
     </el-col>
   </el-row>
-  <Tag />
+  <TagSearch :tagList="tagList" />
   <div class="challenge-list">
-    <ChallengeList />
+    <ChallengeList :challengeList="challengeList" :challengeTotal="challengeTotal"/>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Category from "components/Category.vue";
-import ChallengeSearch from "components/Category.vue";
-import Tag from "components/Tag.vue";
-import ChallengeList from "components/ChallengeList.vue";
+import { defineComponent, toRefs, reactive, ref, onMounted } from "vue";
+import { ITagItem, ICategory, IChallengeInfo } from "@/types";
+import { getTagList, getCategoryList, getChallengeList } from "@/network/api";
+import Category from "@/components/Category.vue";
+import Search from "@/components/Search.vue";
+import TagSearch from "@/components/TagSearch.vue";
+import ChallengeList from "@/components/ChallengeList.vue";
+
+
+
 
 export default defineComponent({
   name: "ChallengesView",
-  components: { Category, ChallengeSearch, Tag, ChallengeList },
+  components: { Category, Search, TagSearch, ChallengeList },
   setup() {
-    return {};
+    const tagList = ref<ITagItem[]>([]);
+    const categoryList = ref<ICategory[]>([])
+    const challengeList = ref<IChallengeInfo[]>([]);
+    const challengeTotal = ref(0);
+    const methods = reactive({
+      handleChange: (item: any) => {
+        console.log(item)
+      },
+      loadAll: () => {
+        getTagList().then((response: any) => {
+          tagList.value = response.data
+        });
+        getCategoryList().then((response: any) => {
+          categoryList.value = response.data
+        });
+        getChallengeList().then((response: any) => {
+          challengeTotal.value = response.data.length;
+          challengeList.value = response.data;
+        });
+      }
+    })
+    onMounted(() => {
+      methods.loadAll()
+    })
+    return { ...toRefs(methods), tagList, categoryList, challengeList, challengeTotal };
   },
 });
 </script>

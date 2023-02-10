@@ -5,19 +5,21 @@
         <div class="body-left">
           <el-card>
             <div class="search-bar">
-              <ChallengeSearch />
+              <Search placeholderText="搜索团队" />
             </div>
-            <el-table :data="teamsData" stripe>
+            <el-table :data="teamList" stripe>
               <el-table-column prop="id" label="ID" />
               <el-table-column prop="name" label="团队名" show-overflow-tooltip>
                 <template #default="scope">
-                  <el-link :href="'/team/' + 1" type="primary" :underline="false">{{ scope.row.name }}</el-link>
+                  <el-link :href="'/team/' + scope.row.id" type="primary" :underline="false">{{
+                    scope.row.name
+                  }}</el-link>
                 </template>
               </el-table-column>
-              <el-table-column prop="declaration" label="宣言" />
+              <el-table-column prop="declare" label="宣言" />
               <el-table-column prop="captain" label="队长" show-overflow-tooltip>
                 <template #default="scope">
-                  <el-link :href="'/user/' + 1">{{ scope.row.captain }}</el-link>
+                  <el-link :href="'/user/' + scope.row.captain.id">{{ scope.row.captain.username }}</el-link>
                 </template>
               </el-table-column>
             </el-table>
@@ -53,29 +55,29 @@
           </el-card>
           <el-card class="my-team">
             <el-row justify="space-evenly">
-              <el-col :span="8"> 我的团队</el-col>
+              <el-col :span="10"> 我的团队</el-col>
               <el-col :span="12">
                 <el-button @click="visible = true" type="primary" round>创建团队</el-button>
               </el-col>
             </el-row>
             <el-row justify="space-evenly">
-              <el-col :span="8"> 团队名：</el-col>
+              <el-col :span="10"> 团队名：</el-col>
               <el-col :span="12">
                 <el-link :href="'/team/' + 1" :underline="false">flag{}___Orz </el-link>
               </el-col>
             </el-row>
             <el-row justify="space-evenly">
-              <el-col :span="8"> 队长：</el-col>
+              <el-col :span="10"> 队长：</el-col>
               <el-col :span="12">
                 <el-link :href="'/user/' + 1" :underline="false">Venenof7 </el-link>
               </el-col>
             </el-row>
             <el-row justify="space-evenly">
-              <el-col :span="8"> 团队人数：</el-col>
+              <el-col :span="10"> 团队人数：</el-col>
               <el-col :span="12">7</el-col>
             </el-row>
             <el-row justify="space-evenly">
-              <el-col :span="8"> 创建时间：</el-col>
+              <el-col :span="10"> 创建时间：</el-col>
               <el-col :span="12">2021-09-30</el-col>
             </el-row>
           </el-card>
@@ -108,17 +110,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive } from "vue";
-import ChallengeSearch from 'components/ChallengeSearch.vue'
+import { defineComponent, ref, reactive, onMounted, toRefs } from "vue";
+import Search from '@/components/Search.vue'
+import { getTeamList } from "@/network/api";
+import { ITeam } from "@/types"
+
 export default defineComponent({
   name: "TeamsView",
-  components: { ChallengeSearch },
+  components: { Search },
   setup() {
     const visible = ref(false)
     const teamInfo = reactive({
       name: '',
       introduction: '',
       declaration: '',
+    })
+    const teamList = ref<ITeam[]>([])
+    const methods = reactive({
+      loadAll: () => {
+        getTeamList().then((response: any) => {
+          teamList.value = response.data.length;
+          teamList.value = response.data;
+          console.log(teamList.value)
+        })
+      }
+    })
+    onMounted(() => {
+      methods.loadAll()
     })
     const teamsData = [
       {
@@ -147,6 +165,8 @@ export default defineComponent({
       },
     ]
     return {
+      ...toRefs(methods),
+      teamList,
       visible,
       teamInfo,
       teamsData

@@ -59,12 +59,17 @@ export const login = (user: IUserInfoState) => {
             return Promise.reject(error)
         })
 }
+
+export const getCategoryList = () => {
+    return http.get({ url: "/category/" })
+}
+
 export const getUserInfo = (id: number) => {
     return http.get({ url: `/user/${id}` })
 }
 
 export const getTagList = () => {
-    return http.get({ url: '/challenge/tag/' })
+    return http.get({ url: '/tag/' })
 }
 
 export const getChallengeList = () => {
@@ -72,6 +77,14 @@ export const getChallengeList = () => {
 }
 export const getChallengeInfo = (id: number) => {
     return http.get({ url: `/challenge/${id}` })
+}
+
+export const getTeamList = () => {
+    return http.get({ url: "/team/" })
+}
+
+export const getTeamInfo = (id: number) => {
+    return http.get({ url: `/team/${id}` })
 }
 
 export const logout = () => {

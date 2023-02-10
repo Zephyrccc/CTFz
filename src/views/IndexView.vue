@@ -64,9 +64,9 @@
       <el-table :data="joinData" stripe>
         <el-table-column prop="username" label="用户" show-overflow-tooltip>
           <template #default="scope">
-            <el-link :href="'/user/' + 1" type="primary">{{
-              scope.row.username
-            }}</el-link>
+            <el-link :href="'/user/' + 1" type="primary">
+            {{scope.row.username}}
+            </el-link>
           </template>
         </el-table-column>
         <el-table-column prop="time" label="申请时间" width="300" />

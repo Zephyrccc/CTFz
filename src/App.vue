@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header height="45px" class="nav-header">
-      <Header></Header>
+      <Header />
     </el-header>
     <el-main class="main">
       <router-view />
@@ -13,8 +13,6 @@
 <script lang="ts">
 import { defineComponent, reactive, onMounted } from "vue";
 import { useStore } from "vuex";
-import { getTagList } from "@/network/api";
-import { TYPES } from "@/types";
 import Header from "components/Header.vue";
 
 export default defineComponent({
@@ -41,16 +39,15 @@ export default defineComponent({
           sessionStorage.setItem("store", state == null ? "" : state);
         });
       },
-      loadAll: () => {
-        getTagList().then((response: any) => {
-          // 从后端获取tag列表
-          store.commit(`ChallengeInfo/${TYPES.UPDATE_TAG_LIST}`, response.data);
-        });
-      }
+      // loadAll: () => {
+      //   getTagList().then((response: any) => {
+      //     // 从后端获取tag列表
+      //     store.commit(`ChallengeInfo/${TYPES.UPDATE_TAG_LIST}`, response.data);
+      //   });
+      // }
     })
     onMounted(() => {
       methods.prepare()
-      methods.loadAll()
     })
   },
 });

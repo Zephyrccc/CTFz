@@ -14,8 +14,8 @@
               </p>
               <p>
                 标签：
-                <el-tag v-for="tag in challengeInfo?.tag" :key="tag">
-                  {{ tagMapping(tag) }}
+                <el-tag v-for="tag in challengeInfo?.tag" :key="tag.id">
+                  {{ tag.value }}
                 </el-tag>
               </p>
               <p>分数： {{ challengeInfo?.score }}</p>
@@ -89,7 +89,7 @@
             </el-row>
             <el-row justify="space-evenly">
               <el-col :span="8"> 上传时间： </el-col>
-              <el-col :span="8"> 2021-09-30 </el-col>
+              <el-col :span="8"> {{ formatTime(challengeInfo?.created_time) }} </el-col>
             </el-row>
             <el-row justify="space-evenly">
               <el-col :span="8"> 题目状态： </el-col>
@@ -106,9 +106,9 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, reactive, onMounted, toRefs } from "vue";
-import { Download, Upload } from "@element-plus/icons-vue";
 import { useRoute } from 'vue-router'
-import { useStore } from "vuex";
+import moment from 'moment'
+import { Download, Upload } from "@element-plus/icons-vue";
 import { ITagItem, IChallengeInfo } from "@/types";
 import { getChallengeInfo } from "@/network/api";
 
@@ -117,28 +117,23 @@ export default defineComponent({
   props: {},
   components: { Download, Upload },
   setup() {
-    const store = useStore();
     const route = useRoute();
     const challengeInfo = ref<IChallengeInfo>()
-    const challengeDifficulty = ref(3.7);
+    const challengeDifficulty = ref(0);
     const methods = reactive({
-      tagMapping: (id: number) => {
-        return store.state.ChallengeInfo.tagList.find((t: any) => t.id === id)?.value
+      formatTime: (time: string | undefined) => {
+        return moment(time).format("YYYY-MM-DD")
       },
       loadAll: () => {
         getChallengeInfo(Number(route.params.id)).then((response: any) => {
           challengeInfo.value = response.data
           challengeDifficulty.value = response.data.difficulty
-          console.log(challengeInfo)
         });
       }
     })
     onMounted(() => {
       methods.loadAll()
     });
-
-
-
 
     const flagValue = ref("");
     const commentText = ref("");
@@ -147,11 +142,7 @@ export default defineComponent({
     const challengeScore = ref(3.7);
     const challengeDescribe = ref("TestChallengeDescribe1");
     const challengeAttachment = ref("TestChallengeAttachment1");
-    const tagList = ref<ITagItem[]>([
-      { id: 1, value: "Web" },
-      { id: 2, value: "Pwn" },
-      { id: 3, value: "Misc" },
-    ]);
+    const tagList = ref<ITagItem[]>([]);
     return {
       ...toRefs(methods),
       challengeInfo,
