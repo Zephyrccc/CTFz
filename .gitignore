@@ -66,4 +66,4 @@ Thumbs.db
 *.DS_Store
 
 # other
-data/mariadb/*
+data/mariadb/
