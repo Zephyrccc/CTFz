@@ -1,0 +1,2597 @@
+[
+    {
+        "model": "CTFz.category",
+        "pk": 1,
+        "fields": {
+            "name": "All"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 2,
+        "fields": {
+            "name": "Web"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 3,
+        "fields": {
+            "name": "Pwn"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 4,
+        "fields": {
+            "name": "Reverse"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 5,
+        "fields": {
+            "name": "Crypto"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 6,
+        "fields": {
+            "name": "Misc"
+        }
+    },
+    {
+        "model": "CTFz.category",
+        "pk": 7,
+        "fields": {
+            "name": "Other"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 1,
+        "fields": {
+            "value": "PHP"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 2,
+        "fields": {
+            "value": "SQL注入"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 3,
+        "fields": {
+            "value": "SSRF"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 4,
+        "fields": {
+            "value": "字符集特性"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 5,
+        "fields": {
+            "value": "代码审计"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 6,
+        "fields": {
+            "value": "反序列化"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 7,
+        "fields": {
+            "value": "JWT"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 8,
+        "fields": {
+            "value": "Phar"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 9,
+        "fields": {
+            "value": "盲注"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 10,
+        "fields": {
+            "value": "POP"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 11,
+        "fields": {
+            "value": "Session"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 12,
+        "fields": {
+            "value": "沙盒逃逸"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 13,
+        "fields": {
+            "value": "XSS"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 14,
+        "fields": {
+            "value": "SSTI"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 15,
+        "fields": {
+            "value": "Tornado"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 16,
+        "fields": {
+            "value": "文件包含"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 17,
+        "fields": {
+            "value": "伪协议"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 18,
+        "fields": {
+            "value": "请求头伪造"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 19,
+        "fields": {
+            "value": "Cookie"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 20,
+        "fields": {
+            "value": "JS"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 21,
+        "fields": {
+            "value": "变量覆盖"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 22,
+        "fields": {
+            "value": "SQL注入"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 23,
+        "fields": {
+            "value": "文件上传"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 24,
+        "fields": {
+            "value": "堆叠注入"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 25,
+        "fields": {
+            "value": "git泄露"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 26,
+        "fields": {
+            "value": "二次注入"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 27,
+        "fields": {
+            "value": "Python"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 28,
+        "fields": {
+            "value": "逻辑漏洞"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 29,
+        "fields": {
+            "value": "格式化字符串"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 30,
+        "fields": {
+            "value": "缓冲区溢出"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 31,
+        "fields": {
+            "value": "大小端序"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 32,
+        "fields": {
+            "value": "文件描述符"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 33,
+        "fields": {
+            "value": "整数溢出"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 34,
+        "fields": {
+            "value": "ret2libc"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 35,
+        "fields": {
+            "value": "LibcSearcher"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 36,
+        "fields": {
+            "value": "ret2text"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 37,
+        "fields": {
+            "value": "ROP"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 38,
+        "fields": {
+            "value": "shellcode"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 39,
+        "fields": {
+            "value": "syscall"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 40,
+        "fields": {
+            "value": "Android"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 41,
+        "fields": {
+            "value": "UPX壳"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 42,
+        "fields": {
+            "value": "DFS"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 43,
+        "fields": {
+            "value": "Base64"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 44,
+        "fields": {
+            "value": "C"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 45,
+        "fields": {
+            "value": "异或加密"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 46,
+        "fields": {
+            "value": "花指令"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 47,
+        "fields": {
+            "value": "C#"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 48,
+        "fields": {
+            "value": "算法分析"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 49,
+        "fields": {
+            "value": "Z3"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 50,
+        "fields": {
+            "value": "Risc-V"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 51,
+        "fields": {
+            "value": "动态调试"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 52,
+        "fields": {
+            "value": "XOR"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 53,
+        "fields": {
+            "value": "二进制"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 54,
+        "fields": {
+            "value": "RSA"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 55,
+        "fields": {
+            "value": "dp泄露攻击"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 56,
+        "fields": {
+            "value": "低加密指数攻击"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 57,
+        "fields": {
+            "value": "OTP"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 58,
+        "fields": {
+            "value": "邻近素数"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 59,
+        "fields": {
+            "value": "Feistel"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 60,
+        "fields": {
+            "value": "AES"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 61,
+        "fields": {
+            "value": "块加密"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 62,
+        "fields": {
+            "value": "威尔逊定理"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 63,
+        "fields": {
+            "value": "p-1光滑攻击"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 64,
+        "fields": {
+            "value": "古典密码"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 65,
+        "fields": {
+            "value": "维吉尼亚"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 66,
+        "fields": {
+            "value": "CRT"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 67,
+        "fields": {
+            "value": "coppersmith"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 68,
+        "fields": {
+            "value": "压缩包"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 69,
+        "fields": {
+            "value": "音频隐写"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 70,
+        "fields": {
+            "value": "CRC爆破"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 71,
+        "fields": {
+            "value": "汉明权重"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 72,
+        "fields": {
+            "value": "图片隐写"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 73,
+        "fields": {
+            "value": "流量分析"
+        }
+    },
+    {
+        "model": "CTFz.tag",
+        "pk": 74,
+        "fields": {
+            "value": "USB流量"
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 1,
+        "fields": {
+            "title": "[ASIS 2019]Unicorn Shop",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-03T09:26:41.467",
+            "tag": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 2,
+        "fields": {
+            "title": "[BUUCTF 2018]Online Tool",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-03T09:27:13.559",
+            "tag": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 3,
+        "fields": {
+            "title": "[CISCN 2019华北Day1]Web1",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 4.8,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-20T09:50:20.599",
+            "tag": [
+                5,
+                6,
+                8
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 4,
+        "fields": {
+            "title": "[CISCN 2019华北Day1]Web2",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 4.5,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:32:42.907",
+            "tag": [
+                6,
+                7,
+                18,
+                19,
+                27
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 5,
+        "fields": {
+            "title": "[CISCN 2019华北Day2]Web1",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 4.7,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:35:31.266",
+            "tag": [
+                9
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 6,
+        "fields": {
+            "title": "[DDCTF 2019]homebrew event loop",
+            "environment_type": true,
+            "category": 2,
+            "describe": "题目入口路径:/d5afe1f66147e857/",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:39:15.553",
+            "tag": [
+                10,
+                11,
+                12
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 7,
+        "fields": {
+            "title": "[FBCTF 2019]Products Manager",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:40:37.467",
+            "tag": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 8,
+        "fields": {
+            "title": "[HCTF 2017]Deserted place",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:45:48.370",
+            "tag": [
+                13
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 9,
+        "fields": {
+            "title": "[HCTF 2018]Warmup",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 5.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:46:53.172",
+            "tag": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 10,
+        "fields": {
+            "title": "[Hitcon 2016]Leaking",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:47:46.319",
+            "tag": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 11,
+        "fields": {
+            "title": "[护网杯 2018]easy tornado",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:49:08.664",
+            "tag": [
+                14,
+                15
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 12,
+        "fields": {
+            "title": "[MoeCTF 2022]baby file",
+            "environment_type": true,
+            "category": 2,
+            "describe": "“海纳百川，有容乃大；壁立千仞，无欲则刚。” 寓意人要像大海能容纳无数江河水一样的胸襟宽广，以容纳和融合来对他人。(我们坤坤都这么努力了，你们为什么还要黑他 !!!？小黑子们真虾头！！)",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:51:20.836",
+            "tag": [
+                1,
+                16,
+                17
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 13,
+        "fields": {
+            "title": "[MoeCTF 2022]cookiehead",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:52:58.275",
+            "tag": [
+                18,
+                19
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 14,
+        "fields": {
+            "title": "[MoeCTF 2022]ezhtml",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:54:40.206",
+            "tag": [
+                20
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 15,
+        "fields": {
+            "title": "[MoeCTF 2022]ezphp",
+            "environment_type": true,
+            "category": 2,
+            "describe": "最近AQ喜欢上了一款多人在线作战游戏，但是他总是几分钟就GG了，这时他身边的h4haha说:\"你一来就全面火力覆盖啊！这不就赢了吗?\"",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:55:35.692",
+            "tag": [
+                1,
+                21
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 16,
+        "fields": {
+            "title": "[MoeCTF 2022]Sqlmap_boy",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:57:42.224",
+            "tag": [
+                22
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 17,
+        "fields": {
+            "title": "[MoeCTF 2022]what are y0u uploading？",
+            "environment_type": true,
+            "category": 2,
+            "describe": "can can need 马子?????！",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T09:59:15.691",
+            "tag": [
+                23
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 18,
+        "fields": {
+            "title": "[PWNHUB 2017]傻 fufu 的工作日",
+            "environment_type": true,
+            "category": 2,
+            "describe": "啊～又到了（划水的）工作日，工作一整天，人都傻 fufu 的了... 不如让我们来跟胖哈勃来一场星际旅行吧！ 快来！就差你啦 说明：花钱解密源码和说不清源码解密方式的同学，酌情往后排，能说清楚源码解密原理并给出方法的同学加分。",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:02:56.829",
+            "tag": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 19,
+        "fields": {
+            "title": "[强网杯 2019]高明的黑客",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:05:25.805",
+            "tag": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 20,
+        "fields": {
+            "title": "[强网杯 2019]随便注",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 2.9,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:07:59.476",
+            "tag": [
+                2,
+                24
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 21,
+        "fields": {
+            "title": "[强网杯 2019]upload",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:09:23.943",
+            "tag": [
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 22,
+        "fields": {
+            "title": "[网鼎杯 2018]comment",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 3.5,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:11:17.716",
+            "tag": [
+                2,
+                25
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 23,
+        "fields": {
+            "title": "[网鼎杯 2018]Fakebook",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 3.1,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:12:33.782",
+            "tag": [
+                2,
+                3,
+                6
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 24,
+        "fields": {
+            "title": "[网鼎杯 2018]unfinish",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:13:26.814",
+            "tag": [
+                22,
+                26
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 25,
+        "fields": {
+            "title": "[WesternCTF 2018]shrine",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:15:02.553",
+            "tag": [
+                14
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 26,
+        "fields": {
+            "title": "[XDCTF 2015]filemanager",
+            "environment_type": true,
+            "category": 2,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T10:15:58.739",
+            "tag": [
+                5,
+                26
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 27,
+        "fields": {
+            "title": "[MoeCTF 2022]babyfmt",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04",
+            "score": 1,
+            "difficulty": 2.5,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_babyfmt.zip",
+            "created_time": "2023-04-21T10:32:05.898",
+            "tag": [
+                29
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 28,
+        "fields": {
+            "title": "[MoeCTF 2022]border",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_border.zip",
+            "created_time": "2023-04-21T10:34:54.298",
+            "tag": []
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 29,
+        "fields": {
+            "title": "[MoeCTF 2022]buffer overflow",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_buffer_overflow.zip",
+            "created_time": "2023-04-21T10:37:23.120",
+            "tag": [
+                30
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 30,
+        "fields": {
+            "title": "[MoeCTF 2022]endian",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04 剥鸡蛋是先剥大头还是先剥小头?",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_endian.zip",
+            "created_time": "2023-04-21T10:39:06.828",
+            "tag": [
+                31
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 31,
+        "fields": {
+            "title": "[MoeCTF 2022]filedes",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04 Everything is a file!",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_filedes.zip",
+            "created_time": "2023-04-21T10:40:30.306",
+            "tag": [
+                32
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 32,
+        "fields": {
+            "title": "[MoeCTF 2022]Int overflow",
+            "environment_type": true,
+            "category": 3,
+            "describe": "Ubuntu 16.04 溢出是什么，是一杯水装不下吗",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_int_overflow.zip",
+            "created_time": "2023-04-21T10:43:13.548",
+            "tag": [
+                33
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 33,
+        "fields": {
+            "title": "[MoeCTF 2022]random",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04 上帝会掷骰子吗?",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_random.zip",
+            "created_time": "2023-04-21T10:44:28.250",
+            "tag": []
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 34,
+        "fields": {
+            "title": "[MoeCTF 2022]ret2libc",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_ret2libc.zip",
+            "created_time": "2023-04-21T10:47:44.234",
+            "tag": [
+                34,
+                35
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 35,
+        "fields": {
+            "title": "[MoeCTF 2022]ret2text",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04 I hate CET-4...Where's the gift?",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_ret2text.zip",
+            "created_time": "2023-04-21T10:50:45.006",
+            "tag": [
+                30,
+                36
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 36,
+        "fields": {
+            "title": "[MoeCTF 2022]rop32",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04",
+            "score": 1,
+            "difficulty": 2.8,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_rop32.zip",
+            "created_time": "2023-04-21T10:55:22.373",
+            "tag": [
+                37
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 37,
+        "fields": {
+            "title": "[MoeCTF 2022]rop64",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04",
+            "score": 1,
+            "difficulty": 2.5,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_rop64.zip",
+            "created_time": "2023-04-21T10:56:51.726",
+            "tag": [
+                37
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 38,
+        "fields": {
+            "title": "[MoeCTF 2022]shell",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04 你会用 Linux 吗? 你知道什么是 Shell 吗?",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_shell.zip",
+            "created_time": "2023-04-21T10:58:14.435",
+            "tag": [
+                37
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 39,
+        "fields": {
+            "title": "[MoeCTF 2022]shellcode",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 16.04",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_shellcode.zip",
+            "created_time": "2023-04-21T11:00:17.167",
+            "tag": [
+                38
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 40,
+        "fields": {
+            "title": "[MoeCTF 2022]syscall",
+            "environment_type": true,
+            "category": 3,
+            "describe": "ubuntu 22.04",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "",
+            "attachment": "attachments/moectf_2022_syscall.zip",
+            "created_time": "2023-04-21T11:04:54.565",
+            "tag": [
+                39
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 41,
+        "fields": {
+            "title": "[MoeCTF 2022]Android Cracker",
+            "environment_type": false,
+            "category": 4,
+            "describe": "据小道消息，大黑阔ghost黑了DX的电脑，并在这道题里放了个backdoor！！！你能找到它吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Andr01d_1s_so00oo_e@sy_t0_cr4ck!!!}",
+            "attachment": "attachments/moectf_2022_Android_Cracker.zip",
+            "created_time": "2023-04-21T11:09:17.246",
+            "tag": [
+                40
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 42,
+        "fields": {
+            "title": "[MoeCTF 2022]Art",
+            "environment_type": false,
+            "category": 4,
+            "describe": "你好像能用IDA的F5很轻易地还原我的源码诶，这可不行。艺术是含蓄的，代码也要含蓄，所以我给程序穿了一件衣服来保护它！ 同时，艺术又是狂野的，因为艺术就是爆炸！所以呢……去爆破每一种可能吧！ PS:exe附件反编译出来的伪代码可能会更好看一些 :)",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Art_i5_b14s7ing!!!!!}",
+            "attachment": "attachments/moectf_2022_Art.zip",
+            "created_time": "2023-04-21T11:11:31.721",
+            "tag": [
+                41,
+                42
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 43,
+        "fields": {
+            "title": "[MoeCTF 2022]Base",
+            "environment_type": false,
+            "category": 4,
+            "describe": "base64可以将ascii表中无法显示的数转化为可以显示的数，进而方便在网络中进行传输qwq（建议百度查找一下原理）不过这个base有一点不一样哦",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{qwqbase_qwq}",
+            "attachment": "attachments/moectf_2022_Base.zip",
+            "created_time": "2023-04-21T11:13:04.606",
+            "tag": [
+                43
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 44,
+        "fields": {
+            "title": "[MoeCTF 2022]begin",
+            "environment_type": false,
+            "category": 4,
+            "describe": "xor，异或，是一种神奇的运算。当用异或对一段数据进行加密，怎样才能将密文恢复成明文呢？ 搜索引擎会告诉你答案~加油吧",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{X0r_1s_s0_int3r3sting!!!!!}",
+            "attachment": "attachments/moectf_2022_begin.zip",
+            "created_time": "2023-04-21T11:15:12.332",
+            "tag": [
+                44,
+                45
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 45,
+        "fields": {
+            "title": "[MoeCTF 2022]checkin",
+            "environment_type": false,
+            "category": 4,
+            "describe": "这是一道非常简单的签到题，借助IDA可以很快capture the flag~",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Enjoy_yourself_in_Reverse_Engineering!!!}",
+            "attachment": "attachments/moectf_2022_checkin.zip",
+            "created_time": "2023-04-21T11:17:01.647",
+            "tag": []
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 46,
+        "fields": {
+            "title": "[MoeCTF 2022]chicken soup",
+            "environment_type": false,
+            "category": 4,
+            "describe": "“欸嘿嘿嘿嘿~题来咯~欸，这这，这题都上了，你们怎么都不逆啊？” “云之君啊，大伙都不敢逆。DX神说，有人在这程序里下了毒，不能F5了。” “哎哟哟，你这人就喜欢开玩笑，哎呀，快逆吧，我不打扰了，我走了哈。” “你不能走。你要是没放毒，你就把这程序给我逆了。” “行，我逆，逆！哎呀，这F5，多是一件美事啊。啧啧啧，IDA一片飘红，肯定可以F5的。” “哎！tnnd为什么不逆！都不敢逆，都不敢F5是吧？既然大家都知道了，这戏我就不演了！这程序里的花指令，就是我放的！我就是要让你们都不能F5！”",
+            "score": 1,
+            "difficulty": 1.2,
+            "status": true,
+            "flag": "moectf{p4tch_pr0gr4m_t0_d3c0mpi1e_it!}",
+            "attachment": "attachments/moectf_2022_chicken_soup.zip",
+            "created_time": "2023-04-21T11:18:53.448",
+            "tag": [
+                46
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 47,
+        "fields": {
+            "title": "[MoeCTF 2022]D flat",
+            "environment_type": false,
+            "category": 4,
+            "describe": "来学点音乐知识吧~ 你知道降D跟哪个音的音高相等吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{D_flate_is_C_sharp!}",
+            "attachment": "attachments/moectf_2022_D_flat.zip",
+            "created_time": "2023-04-21T11:21:04.971",
+            "tag": [
+                47,
+                48
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 48,
+        "fields": {
+            "title": "[MoeCTF 2022]EquationPy",
+            "environment_type": false,
+            "category": 4,
+            "describe": "python逆向是怎么一回事呢？pyc文件怎么逆向呢？ 悄悄告诉你，当你讨厌解方程时，z3会告诉你答案~",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{z3_i5_he1pful!}",
+            "attachment": "attachments/moectf_2022_EquationPy.zip",
+            "created_time": "2023-04-21T11:22:44.029",
+            "tag": [
+                27,
+                49
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 49,
+        "fields": {
+            "title": "[MoeCTF 2022]EzRisc-V",
+            "environment_type": false,
+            "category": 4,
+            "describe": "DX在tratra的电脑里发现了一个神必二进制文件，据说里面藏着tratra的秘密！但是DX太菜了，不会分析，作为一位逆向带师，你能帮帮他吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{r1sc-v_1s_so00oo_1nterest1n9!!!}",
+            "attachment": "attachments/moectf_2022_EzRisc-V.zip",
+            "created_time": "2023-04-21T11:24:07.209",
+            "tag": [
+                50
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 50,
+        "fields": {
+            "title": "[MoeCTF 2022]ezTea",
+            "environment_type": false,
+            "category": 4,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Th3_TEA_!S_s0_t4s7y~~!!!}",
+            "attachment": "attachments/moectf_2022_ezTea.zip",
+            "created_time": "2023-04-21T11:26:14.509",
+            "tag": [
+                48
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 51,
+        "fields": {
+            "title": "[MoeCTF 2022]Fake code",
+            "environment_type": false,
+            "category": 4,
+            "describe": "云之君在track神的电脑里找到了他珍藏的flag，于是急匆匆拿出了文件想要逆出flag。 可是按照IDA反编译的伪C代码解密出来的全是乱码，这是怎么回事呢？ 幸好万能的track神告诉云之君，IDA也会骗人，这个伪C代码是假的，想要拿到flag只能分析汇编代码！ 悲剧的是，云之君是一个只会F5的家伙，一点汇编也看不懂呜呜呜，这可怎么办呢",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Re4d_4ssemb1y_t0_g3t_the_m4gic_key_0f_Tr4ck}",
+            "attachment": "attachments/moectf_2022_Fake_code.zip",
+            "created_time": "2023-04-21T11:27:46.395",
+            "tag": [
+                51,
+                52
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 52,
+        "fields": {
+            "title": "[MoeCTF 2022]Fake key",
+            "environment_type": false,
+            "category": 4,
+            "describe": "眼见不一定为真，就像你看到的密钥。 程序中出现不确定的数字怎么办呢？调试就完事。",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{D3bug_t0_g3t_7he_Key!}",
+            "attachment": "attachments/moectf_2022_fake_key.zip",
+            "created_time": "2023-04-21T11:29:15.764",
+            "tag": [
+                51
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 53,
+        "fields": {
+            "title": "[MoeCTF 2022]gogogo",
+            "environment_type": false,
+            "category": 4,
+            "describe": "RX神轻易地攻破了DX的服务器，拿到了服务端程序，随便看了一眼，说这道题不是有手就行？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moeCTF{g0l@ng_1s_4n_1nte^est1n9_lan9ua9e}",
+            "attachment": "attachments/moectf_2022_gogogo.zip",
+            "created_time": "2023-04-21T11:32:43.771",
+            "tag": []
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 54,
+        "fields": {
+            "title": "[MoeCTF 2022]Hex",
+            "environment_type": false,
+            "category": 4,
+            "describe": "查看文件16进制内容的工具:Notepad++,WinHex,010(推荐)",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Hello_Hex}",
+            "attachment": "attachments/moectf_2022_Hex.zip",
+            "created_time": "2023-04-21T11:34:34.641",
+            "tag": [
+                53
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 55,
+        "fields": {
+            "title": "[MoeCTF 2022]0rsa0",
+            "environment_type": false,
+            "category": 5,
+            "describe": "",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{T8uus_23jkjw_asr_3d32awd!5f&#@sd}",
+            "attachment": "attachments/moectf_2022_0rsa0.zip",
+            "created_time": "2023-04-21T11:41:50.053",
+            "tag": [
+                54,
+                55,
+                56
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 56,
+        "fields": {
+            "title": "[MoeCTF 2022]不止一次",
+            "environment_type": false,
+            "category": 5,
+            "describe": "“一次就好，我陪你去看天荒地老”~~~ 可是，如果有机会可以不止一次呢？ 你能否把握住那个key吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{sa3d_SD2a@sd_sa44@#d2sa_ad132$aw3_a23d}",
+            "attachment": "attachments/moectf_2022_babyNET.zip",
+            "created_time": "2023-04-21T11:43:16.216",
+            "tag": [
+                57
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 57,
+        "fields": {
+            "title": "[MoeCTF 2022]一次就好",
+            "environment_type": false,
+            "category": 5,
+            "describe": "“一次就好，我陪你去看天荒地老~~~~”",
+            "score": 1,
+            "difficulty": 2.2,
+            "status": true,
+            "flag": "moectf{W0w_y02_k5ow_w6at_1s_one_t1m3_pa7}",
+            "attachment": "attachments/moectf_2022_一次就好.zip",
+            "created_time": "2023-04-21T11:45:51.992",
+            "tag": [
+                52,
+                54,
+                58
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 58,
+        "fields": {
+            "title": "[MoeCTF 2022]babyNET",
+            "environment_type": false,
+            "category": 5,
+            "describe": "了解过加密模式后，再来试试分组密码的结构吧。这次你还能轻松破解出密码吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{sa3d_SD2a@sd_sa44@#d2sa_ad132$aw3_a23d}",
+            "attachment": "attachments/moectf_2022_babyNET_lR5BdxE.zip",
+            "created_time": "2023-04-21T11:47:28.093",
+            "tag": [
+                59,
+                60
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 59,
+        "fields": {
+            "title": "[MoeCTF 2022]ez cbc",
+            "environment_type": false,
+            "category": 5,
+            "describe": "这个分组加密（块密码）看起来好简单啊！可是我Key在哪呢",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{es72b!a5-njad!@-#!@$sad-6bysgwy-1adsw8}",
+            "attachment": "attachments/moectf_2022_ez_cbc.zip",
+            "created_time": "2023-04-21T11:48:51.812",
+            "tag": [
+                52,
+                61
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 60,
+        "fields": {
+            "title": "[MoeCTF 2022]Signin",
+            "environment_type": false,
+            "category": 5,
+            "describe": "”你这个e取得有问题吧“ ”没有“（嘴硬）",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Oh~Now_Y0u_Kn0W_HoW_RsA_W0rkS!}",
+            "attachment": "attachments/moectf_2022_Signin.zip",
+            "created_time": "2023-04-21T11:50:21.027",
+            "tag": [
+                54
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 61,
+        "fields": {
+            "title": "[MoeCTF 2022]smooth",
+            "environment_type": false,
+            "category": 5,
+            "describe": "smoooooooth",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Charming_primes!_But_Sm0oth_p-1_1s_vu1nerab1e!}",
+            "attachment": "attachments/moectf_2022_smooth.zip",
+            "created_time": "2023-04-21T11:51:50.313",
+            "tag": [
+                54,
+                62,
+                63
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 62,
+        "fields": {
+            "title": "[MoeCTF 2022]vigenere",
+            "environment_type": false,
+            "category": 5,
+            "describe": "维基百科说： 维吉尼亚密码以其简单易用而著称，同时初学者通常难以破解，因而又被称为“不可破译的密码”（法语：le chiffre indéchiffrable）。  那么聪明的你能够破解嘛？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{attacking_the_vigenere_cipher_is_interesting}",
+            "attachment": "attachments/moectf_2022_vigenere.zip",
+            "created_time": "2023-04-21T11:53:17.839",
+            "tag": [
+                64,
+                65
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 63,
+        "fields": {
+            "title": "[MoeCTF 2022]Weird E Revenge",
+            "environment_type": false,
+            "category": 5,
+            "describe": "“你为什么执迷不悟？”",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Th1s_iS_Chinese_rEm41nDeR_The0rEm_CRT!}",
+            "attachment": "attachments/moectf_2022_Weird_E_Revenge.zip",
+            "created_time": "2023-04-21T11:54:29.850",
+            "tag": [
+                54,
+                66
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 64,
+        "fields": {
+            "title": "[强网杯 2019]copperstudy",
+            "environment_type": true,
+            "category": 5,
+            "describe": "",
+            "score": 1,
+            "difficulty": 3.8,
+            "status": true,
+            "flag": "",
+            "attachment": "",
+            "created_time": "2023-04-21T11:56:10.554",
+            "tag": [
+                54,
+                67
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 65,
+        "fields": {
+            "title": "[MoeCTF 2022]想听点啥",
+            "environment_type": false,
+            "category": 6,
+            "describe": "听见啥了？还是看见啥了？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Want_s0me_mor3_mus1c?}",
+            "attachment": "attachments/moectf_2022_想听点啥.zip",
+            "created_time": "2023-04-21T13:46:33.468",
+            "tag": [
+                68,
+                69
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 66,
+        "fields": {
+            "title": "[MoeCTF 2022]小纸条",
+            "environment_type": false,
+            "category": 6,
+            "describe": "由于疫情无法回家的小明，正瘫坐在椅子，给你扔来了一张纸条，然后忧愁地望向窗外... 他怎么想什么呢？ Hint：全部大写，无分隔",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{ILOVEMYBIGBED}",
+            "attachment": "attachments/moectf_2022_小纸条.zip",
+            "created_time": "2023-04-21T13:48:03.979",
+            "tag": [
+                64
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 67,
+        "fields": {
+            "title": "[MoeCTF 2022]A band",
+            "environment_type": false,
+            "category": 6,
+            "describe": "我只知道机器只能听懂这种乐队演奏，一层一层还原，或许有你想要的",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Why_s0_many_1nstruments?}",
+            "attachment": "attachments/moectf_2022_A_band.zip",
+            "created_time": "2023-04-21T13:49:24.978",
+            "tag": [
+                53
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 68,
+        "fields": {
+            "title": "[MoeCTF 2022]bell202",
+            "environment_type": false,
+            "category": 6,
+            "describe": "喂喂？这什么声音？喂？诶我调制解调器放哪了",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{zizi_U_he@rd_the_meanin9_beh1nd_the_s0und}",
+            "attachment": "attachments/moectf_2022_bell202.zip",
+            "created_time": "2023-04-21T13:51:02.934",
+            "tag": [
+                69
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 69,
+        "fields": {
+            "title": "[MoeCTF 2022]cccrrc",
+            "environment_type": false,
+            "category": 6,
+            "describe": "听说zip套娃娃娃跪了，wuliao搞了个超复杂的密码，这次应该没问题了吧",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{qwq_crc!}",
+            "attachment": "attachments/moectf_2022_cccrrc.zip",
+            "created_time": "2023-04-21T13:53:09.493",
+            "tag": [
+                68,
+                70
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 70,
+        "fields": {
+            "title": "[MoeCTF 2022]hamming",
+            "environment_type": false,
+            "category": 6,
+            "describe": "“alice给bob在有噪声的信道发了一条消息，polar拦截了下来，你能帮polar恢复原来的信息吗”",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Oh_Bin4ry_Mag1c_1s_s0o_c0O1!}",
+            "attachment": "attachments/moectf_2022_hamming.zip",
+            "created_time": "2023-04-21T13:54:38.400",
+            "tag": [
+                53,
+                71
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 71,
+        "fields": {
+            "title": "[MoeCTF 2022]Hide and seek",
+            "environment_type": false,
+            "category": 6,
+            "describe": "是谁捉迷藏还把脚露出来了？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Hey_U_ve_f0und_m3!}",
+            "attachment": "attachments/moectf_2022_hide-and-seek.zip",
+            "created_time": "2023-04-21T13:59:54.166",
+            "tag": []
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 72,
+        "fields": {
+            "title": "[MoeCTF 2022]Locked bass",
+            "environment_type": false,
+            "category": 6,
+            "describe": "你想玩贝斯？这锁虚挂着的，能踹",
+            "score": 1,
+            "difficulty": 0.5,
+            "status": true,
+            "flag": "moectf{N0w_th1s_i4_a_b@ss_U_can_u3e_to_pla9}",
+            "attachment": "attachments/moectf_2022_Locked_bass.zip",
+            "created_time": "2023-04-21T14:01:56.563",
+            "tag": [
+                68
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 73,
+        "fields": {
+            "title": "[MoeCTF 2022]nyanyanya",
+            "environment_type": false,
+            "category": 6,
+            "describe": "图片隐写先看看哪里呢？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{A_go0d_way_t0_h14e_in50rmation_in_ima9e3}",
+            "attachment": "attachments/moectf_2022_nyanyanya.zip",
+            "created_time": "2023-04-21T14:03:27.558",
+            "tag": [
+                72
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 74,
+        "fields": {
+            "title": "[MoeCTF 2022]rabbit",
+            "environment_type": false,
+            "category": 6,
+            "describe": "₍ᐢ｡ ˬ ｡ᐢ₎",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{We1c0m3_t0_moectf_an7_3n7oy_y0urse1f}",
+            "attachment": "attachments/moectf_2022_rabbit.zip",
+            "created_time": "2023-04-21T14:04:33.601",
+            "tag": [
+                72
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 75,
+        "fields": {
+            "title": "[MoeCTF 2022]usb",
+            "environment_type": false,
+            "category": 6,
+            "describe": "<CAP>usb<CAP>",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{Learned_a6ou7_USB_tr@ffic}",
+            "attachment": "attachments/moectf_2022_usb.zip",
+            "created_time": "2023-04-21T14:06:16.058",
+            "tag": [
+                73,
+                74
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 76,
+        "fields": {
+            "title": "[MoeCTF 2022]what do you recognize me by",
+            "environment_type": false,
+            "category": 6,
+            "describe": "你还认识我是谁吗？",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{You_r4c0gnize_%e!}",
+            "attachment": "attachments/moectf_2022_what_do_you_recognize_me_by.zip",
+            "created_time": "2023-04-21T14:07:50.198",
+            "tag": [
+                72
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challenge",
+        "pk": 77,
+        "fields": {
+            "title": "[MoeCTF 2022]zip套娃",
+            "environment_type": false,
+            "category": 6,
+            "describe": "zip套娃娃娃",
+            "score": 1,
+            "difficulty": 1.0,
+            "status": true,
+            "flag": "moectf{!zip_qwq_ZIP}",
+            "attachment": "attachments/moectf_2022_zip套娃.zip",
+            "created_time": "2023-04-21T14:09:38.620",
+            "tag": [
+                68
+            ]
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 1,
+        "fields": {
+            "challenge": 1,
+            "image_name": "ctfz/asis_2019_unicorn_shop",
+            "container_port": 6732,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-03T09:26:41.486"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 2,
+        "fields": {
+            "challenge": 2,
+            "image_name": "ctfz/buuctf_2018_online_tool",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-03T09:27:13.582"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 3,
+        "fields": {
+            "challenge": 3,
+            "image_name": "ctfz/ciscn_2019_web_northern_china_day1_web1",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-20T09:50:20.672"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 4,
+        "fields": {
+            "challenge": 4,
+            "image_name": "ctfz/ciscn_2019_web_northern_china_day1_web2",
+            "container_port": 5000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:32:42.909"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 5,
+        "fields": {
+            "challenge": 5,
+            "image_name": "ctfz/ciscn_2019_web_northern_china_day2_web1",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:35:31.268"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 6,
+        "fields": {
+            "challenge": 6,
+            "image_name": "ctfz/ddctf_2019_homebrew_event_loop",
+            "container_port": 5000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:39:15.555"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 7,
+        "fields": {
+            "challenge": 7,
+            "image_name": "ctfz/fbctf_2019_products_manager",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:40:37.469"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 8,
+        "fields": {
+            "challenge": 8,
+            "image_name": "ctfz/hctf_2017_deserted_place",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:45:48.372"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 9,
+        "fields": {
+            "challenge": 9,
+            "image_name": "ctfz/hctf_2018_warmup",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:46:53.173"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 10,
+        "fields": {
+            "challenge": 10,
+            "image_name": "ctfz/hitcon_2016_leaking",
+            "container_port": 3000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:47:46.320"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 11,
+        "fields": {
+            "challenge": 11,
+            "image_name": "ctfz/huwangbei_2018_easy_tornado",
+            "container_port": 5000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:49:08.666"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 12,
+        "fields": {
+            "challenge": 12,
+            "image_name": "ctfz/moectf_2022_baby_file",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:51:20.838"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 13,
+        "fields": {
+            "challenge": 13,
+            "image_name": "ctfz/moectf_2022_cookiehead",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:52:58.277"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 14,
+        "fields": {
+            "challenge": 14,
+            "image_name": "ctfz/moectf_2022_ezhtml",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:54:40.208"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 15,
+        "fields": {
+            "challenge": 15,
+            "image_name": "ctfz/moectf_2022_ezphp",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:55:35.694"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 16,
+        "fields": {
+            "challenge": 16,
+            "image_name": "ctfz/moectf_2022_sqlmap_boy",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:57:42.226"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 17,
+        "fields": {
+            "challenge": 17,
+            "image_name": "ctfz/moectf_2022_what_are_y0u_uploading",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T09:59:15.693"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 18,
+        "fields": {
+            "challenge": 18,
+            "image_name": "ctfz/pwnhub_2017_open_weekday",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:02:56.831"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 19,
+        "fields": {
+            "challenge": 19,
+            "image_name": "ctfz/qwb_2019_smarthacker",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:05:25.806"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 20,
+        "fields": {
+            "challenge": 20,
+            "image_name": "ctfz/qwb_2019_supersqli",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:07:59.478"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 21,
+        "fields": {
+            "challenge": 21,
+            "image_name": "ctfz/qwb_2019_upload",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:09:23.945"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 22,
+        "fields": {
+            "challenge": 22,
+            "image_name": "ctfz/wdb_2018_comment",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:11:17.718"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 23,
+        "fields": {
+            "challenge": 23,
+            "image_name": "ctfz/wdb_2018_fakebook",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:12:33.783"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 24,
+        "fields": {
+            "challenge": 24,
+            "image_name": "ctfz/wdb_2018_unfinish",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:13:26.816"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 25,
+        "fields": {
+            "challenge": 25,
+            "image_name": "ctfz/westerns_2018_shrine",
+            "container_port": 5000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:15:02.555"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 26,
+        "fields": {
+            "challenge": 26,
+            "image_name": "ctfz/xdctf_2015_filemanager",
+            "container_port": 80,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:15:58.741"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 27,
+        "fields": {
+            "challenge": 27,
+            "image_name": "ctfz/moectf_2022_babyfmt",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:32:05.900"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 28,
+        "fields": {
+            "challenge": 28,
+            "image_name": "ctfz/moectf_2022_border",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:34:54.300"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 29,
+        "fields": {
+            "challenge": 29,
+            "image_name": "ctfz/moectf_2022_buffer_overflow",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:37:23.122"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 30,
+        "fields": {
+            "challenge": 30,
+            "image_name": "ctfz/moectf_2022_endian",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:39:06.830"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 31,
+        "fields": {
+            "challenge": 31,
+            "image_name": "ctfz/moectf_2022_filedes",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:40:30.308"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 32,
+        "fields": {
+            "challenge": 32,
+            "image_name": "ctfz/moectf_2022_int_overflow",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:43:13.551"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 33,
+        "fields": {
+            "challenge": 33,
+            "image_name": "ctfz/moectf_2022_random",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:44:28.251"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 34,
+        "fields": {
+            "challenge": 34,
+            "image_name": "ctfz/moectf_2022_ret2libc",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:47:44.236"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 35,
+        "fields": {
+            "challenge": 35,
+            "image_name": "ctfz/moectf_2022_ret2text",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:50:45.008"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 36,
+        "fields": {
+            "challenge": 36,
+            "image_name": "ctfz/moectf_2022_rop32",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:55:22.376"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 37,
+        "fields": {
+            "challenge": 37,
+            "image_name": "ctfz/moectf_2022_rop64",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:56:51.728"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 38,
+        "fields": {
+            "challenge": 38,
+            "image_name": "ctfz/moectf_2022_shell",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T10:58:14.436"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 39,
+        "fields": {
+            "challenge": 39,
+            "image_name": "ctfz/moectf_2022_shellcode",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T11:00:17.169"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 40,
+        "fields": {
+            "challenge": 40,
+            "image_name": "ctfz/moectf_2022_syscall",
+            "container_port": 9999,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T11:04:54.567"
+        }
+    },
+    {
+        "model": "CTFz.challengedockerconfig",
+        "pk": 41,
+        "fields": {
+            "challenge": 64,
+            "image_name": "ctfz/qwb_2019_crypto_copperstudy",
+            "container_port": 10000,
+            "cpu_limit": 0.5,
+            "memory_limit": "128m",
+            "time_limit": 7200,
+            "created_time": "2023-04-21T11:56:10.556"
+        }
+    }
+]
