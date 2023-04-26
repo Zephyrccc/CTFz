@@ -66,4 +66,5 @@ Thumbs.db
 *.DS_Store
 
 # other
-data/*
+data/mariadb/*
+!data/mariadb/.gitkeep
