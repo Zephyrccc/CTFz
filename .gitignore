@@ -67,4 +67,4 @@ Thumbs.db
 
 # other
 data/mariadb/*
-!data/mariadb/.gitignore
+!data/mariadb/.blank
