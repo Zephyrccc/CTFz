@@ -1,3 +1,4 @@
 # other
 data/mariadb/*
 !data/mariadb/.blank
+*.log
