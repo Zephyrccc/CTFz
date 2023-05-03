@@ -30,5 +30,4 @@ def add_docker_container(image_name: str, container_port: int, uuid: str, flag: 
     host_port = container.attrs['NetworkSettings']['Ports'][f'{container_port}/tcp'][0]['HostPort']
     container_id = container.id
     client.close()
-    print("创建容器完成")
     return host_port, container_id

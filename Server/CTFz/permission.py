@@ -3,7 +3,6 @@ from .models import User, DockerContainer
 
 
 class IsUserSelf(BasePermission):
-    # 是否可以访问视图， view表示当前视图对象，如果没有设置的话默认的是True，如果设置，False则表示所有的用户都不能访问该视图
     def has_permission(self, request, view):
         if 'user' not in request.data:
             return False

@@ -24,7 +24,7 @@ from .tasks import remove_container
 from .docker_utils import add_docker_container
 from .utils import add_task, delete_task, delete_container, result_record, challenge_record
 from .permission import IsUserSelf, IsCaptain, CheckCreateTeam, CheckDestroyContainer, IsOwner
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated
 
 
 class LoginView(TokenObtainPairView):
@@ -298,7 +298,6 @@ class DockerContainerViewSet(GenericViewSet, CreateModelMixin, DestroyModelMixin
                 _image_name, _container_port, _uuid, _flag, _cpu_limit, _memory_limit)
             container = DockerContainer.objects.create(
                 container_id=_container_id, user=user, challenge=challenge, flag=_flag, port=_host_port, time_limit=_time_limit)
-            print("对应记录添加")
             _task_id = _container_id
             add_task(remove_container, _time_limit, [_container_id], _task_id)
             serializer = DockerContainerSerializer(container)

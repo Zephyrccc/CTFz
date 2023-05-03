@@ -9,12 +9,10 @@ def add_task(func, time: int, args: list, id: str):
     start_time = datetime.now() + timedelta(seconds=time)
     scheduler.add_job(func=func, trigger='date', run_date=start_time,
                       args=args, id=id, replace_existing=True)
-    print("开启定时任务")
 
 
 def delete_task(task_id: str):
     scheduler.remove_job(task_id)
-    print("定时任务关闭")
 
 
 def challenge_record(user: User, challenge: Challenge, result: bool):
@@ -34,11 +32,9 @@ def delete_container(container: DockerContainer):
     if container.status:
         container.status = False
         container.save()
-    print("成功删除容器")
 
 
 def result_record(user: User, challenge: Challenge,):
     record = SolveRecord.objects.filter(user=user, challenge=challenge).first()
     if not record:
         challenge_record(user, challenge, False)
-        print("该题目从未解出，添加失败对应记录")

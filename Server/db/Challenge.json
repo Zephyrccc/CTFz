@@ -1,54 +1,5 @@
 [
     {
-        "model": "CTFz.category",
-        "pk": 1,
-        "fields": {
-            "name": "All"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 2,
-        "fields": {
-            "name": "Web"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 3,
-        "fields": {
-            "name": "Pwn"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 4,
-        "fields": {
-            "name": "Reverse"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 5,
-        "fields": {
-            "name": "Crypto"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 6,
-        "fields": {
-            "name": "Misc"
-        }
-    },
-    {
-        "model": "CTFz.category",
-        "pk": 7,
-        "fields": {
-            "name": "Other"
-        }
-    },
-    {
         "model": "CTFz.tag",
         "pk": 1,
         "fields": {
